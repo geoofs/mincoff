@@ -8,7 +8,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,13 +24,12 @@ html,
 body{
     width:100%;
     height:100%;
-    overflow:hidden; /* Tidak bisa scroll */
+    overflow:hidden;
 }
 
 body{
     font-family:'Poppins',sans-serif;
 
-    /* Background Gradasi Putih - Cream - Orange */
     background:linear-gradient(
         180deg,
         #FFFFFF 0%,
@@ -45,9 +46,7 @@ body{
 .container{
     width:100%;
     max-width:500px;
-
     padding:60px 20px 30px;
-
     text-align:center;
 }
 
@@ -55,10 +54,26 @@ body{
 .logo{
     width:220px;
     max-width:75%;
-
-    margin-bottom:15px;
-
+    margin-bottom:10px;
     animation:fadeDown .8s ease;
+}
+
+/* Tagline */
+.tagline{
+    font-family:'Montserrat',sans-serif;
+
+    font-size:15px;
+    font-weight:500;
+
+    color:#7A5230;
+
+    line-height:1.5;
+
+    margin-bottom:20px;
+
+    max-width:360px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* Tombol */
@@ -71,7 +86,7 @@ body{
 
     text-decoration:none;
 
-    color:#FFFFFF;
+    color:white;
 
     background:linear-gradient(
         135deg,
@@ -103,14 +118,11 @@ body{
 /* Footer */
 .footer{
     margin-top:20px;
-
     color:#8B5E3C;
-
     font-size:12px;
     font-weight:500;
 }
 
-/* Animasi */
 @keyframes fadeDown{
     from{
         opacity:0;
@@ -132,7 +144,13 @@ body{
     .logo{
         width:190px;
         max-width:72%;
-        margin-bottom:12px;
+        margin-bottom:8px;
+    }
+
+    .tagline{
+        font-size:14px;
+        margin-bottom:18px;
+        max-width:300px;
     }
 
     .btn{
@@ -153,20 +171,20 @@ body{
 
 <div class="container">
 
-    <!-- Logo -->
     <img src="Logocoffetera.png" alt="COFFETERA" class="logo">
 
-    <!-- Tombol Coffetera -->
+    <div class="tagline">
+        Explore the platform, learn the features, and start your coffee journey with Coffetera.
+    </div>
+
     <a href="https://geoofs.github.io/coffeterra/" target="_blank" class="btn">
         COFFETERA
     </a>
 
-    <!-- Tombol Booklet -->
     <a href="https://drive.google.com/file/d/1xd_XFUtu5QMqPt7waYLwfcaLOzbRJphH/view?usp=drive_link" target="_blank" class="btn">
         BOOKLET WEBGIS COFFETERA
     </a>
 
-    <!-- Footer -->
     <div class="footer">
         © 2026 Coffetera
     </div>
