@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Coffetera</title>
+<title>COFFETERA</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,46 +20,57 @@
 body{
     font-family:'Poppins',sans-serif;
     min-height:100vh;
+
+    /* Background */
+    background:url('Wallpaper.png') center center/cover no-repeat fixed;
+
     display:flex;
     justify-content:center;
-    align-items:center;
-    
-    /* Background Full Gambar */
-    background:url('Wallpaper.png') center center/cover no-repeat;
-    
+    align-items:flex-start;
+
     position:relative;
 }
 
-/* Overlay agar tombol lebih jelas */
+/* Overlay tipis */
 body::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.25);
+    background:rgba(0,0,0,0.12);
     z-index:0;
 }
 
 .container{
     width:100%;
     max-width:500px;
-    padding:20px;
-    text-align:center;
+
     position:relative;
     z-index:1;
+
+    text-align:center;
+
+    padding:55px 20px 40px;
 }
 
+/* Logo */
 .logo{
-    width:230px;
-    max-width:80%;
-    margin-bottom:40px;
-    animation:fadeIn 1s ease;
+    width:220px;
+    max-width:75%;
+
+    margin-bottom:15px;
+
+    animation:fadeDown .8s ease;
 }
 
+/* Button */
 .btn{
     display:block;
     width:100%;
-    padding:18px 25px;
-    margin:18px 0;
+
+    padding:18px 24px;
+
+    margin-bottom:12px;
+
     text-decoration:none;
 
     background:#FFFDD0;
@@ -67,39 +78,64 @@ body::before{
 
     border-radius:999px;
 
-    font-size:17px;
+    font-size:16px;
     font-weight:700;
-    letter-spacing:0.5px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    letter-spacing:.4px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 
     transition:all .25s ease;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.3);
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(0,0,0,.25);
 }
 
 .btn:active{
-    transform:scale(0.95);
+    transform:scale(.96);
 }
 
+/* Footer */
 .footer{
-    margin-top:35px;
+    margin-top:20px;
+
     color:white;
-    font-size:13px;
-    text-shadow:0 2px 6px rgba(0,0,0,0.4);
+
+    font-size:12px;
+
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
 }
 
-@keyframes fadeIn{
+@keyframes fadeDown{
     from{
         opacity:0;
-        transform:translateY(-25px);
+        transform:translateY(-20px);
     }
     to{
         opacity:1;
         transform:translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .container{
+        padding:50px 18px 30px;
+    }
+
+    .logo{
+        width:180px;
+        max-width:70%;
+        margin-bottom:14px;
+    }
+
+    .btn{
+        padding:16px 20px;
+        font-size:15px;
+        margin-bottom:10px;
     }
 }
 </style>
@@ -109,16 +145,20 @@ body::before{
 
 <div class="container">
 
-    <img src="Logocoffetera.png" alt="Logo Coffetera" class="logo">
+    <!-- Logo -->
+    <img src="Logocoffetera.png" alt="COFFETERA" class="logo">
 
+    <!-- Tombol Coffetera -->
     <a href="https://geoofs.github.io/coffeterra/" target="_blank" class="btn">
         COFFETERA
     </a>
 
+    <!-- Tombol Booklet -->
     <a href="https://drive.google.com/file/d/1xd_XFUtu5QMqPt7waYLwfcaLOzbRJphH/view?usp=drive_link" target="_blank" class="btn">
         BOOKLET WEBGIS COFFETERA
     </a>
 
+    <!-- Footer -->
     <div class="footer">
         © 2026 Coffetera
     </div>
